@@ -1,6 +1,11 @@
 angular.module("JuegoBingo", [])
 .controller("ControladorJuegoBingo",
-    function ($this){
+    function ($scope) {
+
+        $scope.cantor = new Cantor();
+        $scope.iniciarJuego = function () {
+
+        }
         
     }
 );
