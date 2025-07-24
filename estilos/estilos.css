@@ -51,3 +51,13 @@
   color: white;
 
 }
+
+.tablaCantor td.sacada {
+  background-color: green;
+  color: white;
+}
+
+.tablaCantor td:not(.sacada) {
+  background-color: #ccc;
+  color: black;
+}
