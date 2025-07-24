@@ -20,11 +20,21 @@ this.ultimaBalota=0;
 
     //metodo para sacar balotas
     this.sacarBalota=function () {
-        let balota = Math.floor(Math.random() * 75) +1;    
-
-        this.balotasSacadas[balota-1]=true;
-        this.ultimaBalota=balota;
-
+        let totalsacadas = this.balotasSacadas.filter(valor => valor == true).lenght;
+        if(totalsacadas<75) {
+            let balota = Math.floor(Math.random() * 75) +1; 
+            while (this.balotasSacadas[balota - 1]) {
+            balota = Math.floor(Math.random() * 75) + 1;
+            }
+            this.balotasSacadas[balota-1]=true;
+            this.ultimaBalota=balota;    
+        }
+        else {
+            window.alert("ya se acabaron las balotas");
+        }
 
     }
-}
+        
+
+
+ }
